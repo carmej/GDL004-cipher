@@ -1,0 +1,18 @@
+img{
+	max-width: 100%;
+	}
+.button{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #8787a6;
+    border-radius: 6px;
+    border: 2px solid #666699;
+  }
+  .button:hover{
+    color: #8787a6;
+    background-color: #ffffff;
+  }
+
