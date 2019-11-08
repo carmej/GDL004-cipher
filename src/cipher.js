@@ -1,20 +1,21 @@
 window.cipher = {
-codificar : ( desplazamiento , mensajeACifrar ) => { 
-    let mensajeCifrado =  " " ; 
-    for ( let i =  0 ; i <  mensajeACifrar . length ; i ++ ) { 
-      let resultado = ( mensajeACifrar . charCodeAt (i) -  65  + desplazamiento) %  26  +  65 ;
-      mensajeCifrado + =  Cadena . fromCharCode (resultado); 
+    encode : ( desplazamiento , mensajeACifrar )=> { 
+      let mensajeCifrado =  " " ; 
+      let mensajeMayusculas = mensajeACifrar.toUpperCase();
+      for (i=0 ; i <= mensajeMayusculas.length ; i++ ) { 
+      let nuevoMensaje = ( (mensajeMayusculas.charCodeAt(i)) - 65+ desplazamiento) % 26 + 65;
+      mensajeCifrado += String.fromCharCode(nuevoMensaje); 
     }
     return mensajeCifrado;
 
   },
 
-  decode : ( desplazamiento , mensajeADescifrar ) => { 
+   decode : ( desplazamiento , mensajeADescifrar ) => { 
     let mensajeDescifrado =  " " ; 
-    for ( let i =  0 ; i <  mensajeADescifrar . length ; i ++ ) { 
-      let resultado = ( mensajeADescifrar . charCodeAt (i) -  90  - userKey) %  26  +  90 ; 
-      mensajeDescifrado + =  Cadena . fromCharCode (resultado); 
-
+    for (i =  0 ; i < mensajeADescifrar.length ; i++ ) { 
+      let nuevoMensaje = (mensajeADescifrar.charCodeAt (i)-90-desplazamiento) % 26 + 90; 
+      mensajeDescifrado += String.fromCharCode(nuevoMensaje); 
     }
-    volver mensajeDescifrado; 
-};
+    return mensajeDescifrado.toUpperCase();
+     }
+  }

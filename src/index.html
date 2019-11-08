@@ -6,14 +6,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
     <body>
-     <div id="root">
-      <center>
-        <img src="images/quimica.jpg">
-      <h1>BIENVENIDO A HEALTH SOLUTIONS</h1>
-       <a class= "button" href="code.html">CIFRAR</a> 
-       <a class= "button" href="decode.html">DESCIFRAR</a> 
-      </center>
-    </div> 
+      <div id="root">
+        <center>
+         <img src="images/quimica.jpg">
+        <h1>BIENVENIDO A HEALTH SOLUTIONS</h1>
+        <p> <input class="button" type="button" value="ENTRAR" name="Entrar" id="botonEntrar"></p>
+       </center>
+       </div>
+        <div id="cifrarDescifrar">
+        <p>INTRODUCE EL OFFSET <input type="text" id="offset" /></p>
+        <p>INTRODUCE TU MENSAJE<input type="text" id="obtener_mensaje" /></p><br/>
+          <p><input type="button" class="button" value="CIFRAR" id="CIFRAR" >
+          <input type="button" class="button" value="DESCIFRAR" id="DESCIFRAR" ></p>
+          <p id="resultado"></p>
+       </div>
+       </m> 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
